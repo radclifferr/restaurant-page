@@ -1,13 +1,11 @@
 import './styles.css';
 import createHomePage from "./homepage.js";
-
-
-
+import createMenuPage from "./menu.js";
+import createContactPage from "./contact.js"
 cacheDom();
 createHeader();
-loadPage();
+loadHomePage();
 createFooter();
-
 
 function cacheDom () {
     const container = document.getElementById("container");
@@ -23,7 +21,7 @@ function createHeader () {
         button.textContent =buttons[i];
         button.classList.add(buttons[i]);
         button.addEventListener ("click", () => {
-            loadPage();
+            loadPage(buttons[i]);
         });
         header.appendChild(button);
     }
@@ -34,7 +32,26 @@ function createFooter () {
     footer.classList.add("footer");
     container.appendChild(footer);
 };
-
-function loadPage() {
+function loadHomePage(){
     createHomePage (container);
 }
+
+
+function loadPage(buttonIndex) {
+    clearPageContents()
+    if (buttonIndex ==="Home"){
+        createHomePage (container);
+    }else if (buttonIndex === "Menu"){
+        createMenuPage (container);
+    }else if (buttonIndex === "Contact"){
+        createContactPage(container);
+    }
+}
+
+function clearPageContents() {
+    const main = document.querySelector(".main");
+    if(main != null){
+        main.remove();   
+    }
+    
+};
