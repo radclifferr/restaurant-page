@@ -5,7 +5,7 @@ import moreFood from "./images/more-food.jpg";
 
 function createHomePage (container) {
     const footer= document.querySelector(".footer");
-    const copy = ["Welcome to our Resturant! Good food Here for you to eat!","Featured plate, good grubs", "Chow Down on this. I promise it wont kill you. "]
+    const copy = ["Welcome to our Restaurant! Good food here for you to eat!","Featured plate, good grubs", "Chow Down on this. I promise it wont kill you. "]
     const copyImages = [restaurant, featuredPlate, moreFood];
     const body = document.createElement("div");
     body.classList.add("main");
@@ -18,6 +18,7 @@ function createHomePage (container) {
     for (let i=0; i< copy.length; i++){
         const text = document.createElement("div");
         text.textContent= copy[i];
+        text.classList.add(`home-page${i+1}`);
         homePage.appendChild(text);
         const image = document.createElement("img");
         image.src = copyImages[i];

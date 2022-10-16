@@ -37,17 +37,42 @@ body {
     font: inherit;
 }
 
-.main{
+.home-page {
     display: grid;
-    justify-items: center;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    font-size: 1.25rem;
     gap: 20px;
     padding: 30px;
+    text-align: center;
 }
-.home-page >div> img{
-    height: 300px;
+.home-page1,
+.home-page2,
+.home-page3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+
+.home-page1 {
+    font-size: 2rem;
+    font-weight: 800;
+    grid-column: 1/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home-page1 > img {
+    max-height: 500px;
+    border-radius: 10px;
+}
+.home-page2 >img,
+.home-page3 >img{
+    max-height: 300px;
+    border-radius: 10px;
+}
 
 .menu-item {
     display: flex;
