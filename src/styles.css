@@ -35,7 +35,24 @@ body {
     margin: 10px;
     border-radius: 10px;
     font: inherit;
+    transition-duration: .4s;
 }
+.header >button:hover {
+    transform: scale(1.1);
+    background-color: rgb(35, 0, 117);
+    color: white;
+    font-size: 1.1rem;
+
+}
+.header >button:active{
+    transform: scale(.9);
+    background-color: rgb(35, 0, 117);
+    color: white;
+    font-size: .9rem;
+
+}
+
+
 
 .home-page {
     display: grid;
@@ -54,8 +71,6 @@ body {
     align-items: center;
     justify-content: center;
 }
-
-
 .home-page1 {
     font-size: 2rem;
     font-weight: 800;
@@ -74,16 +89,30 @@ body {
     border-radius: 10px;
 }
 
+
+.menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
 .menu-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    font-weight: 800;
+    padding: 20px;
+    height: 300px;
 
 }
 
 .menu-item >img {
-    width: 200px;
+    border-radius: 10px;
+    margin: 10px;
+    max-width: 250px;
+}
+.menu-item >div {
+    font-weight: 400;
 }
 
 
@@ -94,11 +123,12 @@ body {
     justify-content: center;
 }
 .detailLeft {
-    height: 300px;
+    max-height: 600px;
     border-radius: 10px;
 }
 .detailRight {
     margin: 30px;
+    font-size: 2.25rem
 }
 
 
