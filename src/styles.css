@@ -44,6 +44,10 @@ body {
     gap: 20px;
     padding: 30px;
 }
+.home-page >div> img{
+    height: 300px;
+}
+
 
 .menu-item {
     display: flex;
@@ -59,6 +63,18 @@ body {
 
 
 
+.contact-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detailLeft {
+    height: 300px;
+    border-radius: 10px;
+}
+.detailRight {
+    margin: 30px;
+}
 
 
 
