@@ -5,4 +5,4 @@
 
 ## Demo
 ### Live: [Here](https://radclifferr.github.io/restaurant-page/)
-![Preview](preview.jpg)
+![Preview](preview.JPG)
